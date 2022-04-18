@@ -1,0 +1,856 @@
+
+--- PIN {
+734625
+}
+
+
+--- Entrar a Outlook a trav�s del navegador {
+https://mail.amer.kuehne-nagel.com/owa/
+}
+
+
+--- Administrador PC {
+.\admin
+Sistemas1
+}
+
+
+--- psw {
+PC: 	Milanga06	08/02/2022
+udev:	Milanga06		"
+np03:	Milanga06		"
+}
+
+
+--- Agustina {
+manuela6
+}
+
+
+--- KN GIT {
+https://git.int.kn/
+usuario: jorge.bardaro
+pwd:	 windows
+}
+
+
+--- Jira {
+https://jira.int.kn
+
+Cuando creo, Crear => IT Controlling => Cost Unit 'CIP' y en campo de al lado 'Global LEX Maintenance'
+}
+
+
+--- Doxis4 webCube (D3) {
+https://dms.int.kn/webcube/
+
+Solicitar credenciales en: https://tic.int.kn/spaces/dms/forms/dms-support
+
+Doxis Prod:
+user: jbardaro
+pwd:  DoxisProd2022
+
+https://dms-test.int.kn/webcube/
+Doxis Test:
+user: jbardaro
+pwd:  DoxisTest2022
+}
+
+
+--- Release TIC for Ciel FA/FS objects (Anant) {
+https://tic.int.kn/spaces/global-it-infrastructure/forms/it-global-i-series-change-request-aos1
+Change Implementer:  Amelia Lopez 
+Change Implementer department:  MI-ID 
+Please use time in UTC
+Please put your JIRA link and deployment number in the description  
+All other fields should be standard,  but please let me know if you have any questions
+}
+
+
+--- Carvajal {
+Sitio Web TEST: http://cenflab.cen.biz/site 
+Usuario : jorge.bardaro@kuehne-nagel.com
+Password: Carvajal032022*
+
+Sitio Web PROD: http://cenf.cen.biz/site 
+Usuario : jorge.bardaro@kuehne-nagel.com
+Password: Carvajal022022* 
+
+Sitio Web Soporte: https://mdsebusiness.carvajal.com/CTS/ess.do
+Usuario : 800039996
+Password: kuehne123
+}
+
+
+--- DIAN {
+Ingresa a nombre de                      NIT        
+Numero de documento organiz  			800039996
+Tipo de documento del usuario   		Cedula de Ciudadania
+Numero de documento                 	80088447
+Contraseña                             	Ignaci0
+A la izquierda en el men� de opciones tienen que seleccionar �Factura Electronica� + �15.Consultar resultado de transacciones de facturaci�n�.
+}
+
+
+--- DBnet {
+  https://fe.cl.dbnetcorp.com/SE60/Base/LoginBase
+
+  usuario:  kn_admin
+  password: 123456789
+
+  Monitores -> Monitor DTE -> aqui pongo folio
+}
+
+
+VIGA {
+	usuario: jorge.bardaro@kuehne-nagel.com
+	pwd: Milanga06#
+}
+
+	
+---  KNFresh Alejandro {
+	"username": "AAbate",
+	"password" : "Mateo086"
+}
+
+
+--- GoSocket {
+https://www2.gosocket.net/
+user: Flavio.Nunez@Kuehne-Nagel.com
+pwd : Carajom2020
+}
+
+
+--- UCFE Test {
+KN20210928
+}
+
+
+--- Autority Broker {
+AUTBCFWACN
+}
+
+
+--- Cuba {
+Cuba esta en EMEA asknehst
+BUERICAPB
+BOCAJRS03
+}
+
+
+--- Dataos PC {
+Host Name:		MGTJBARDARO1
+User Name:		Jorge.Bardaro
+Logon Server:	MSDC6AZAN200S
+Os Version:		Windows 10
+Free Space:		C:\33,61 GB NTFS
+}
+
+
+--- Windows 10 {
+  --- Particiones de disco {
+    entrar en Computer Management como adm
+  }
+}
+
+
+--- TuRecibo {
+agnaliM7986
+}
+
+
+--- Para llamar al Robot {
+rbo (enter)
+}
+
+
+--- Cambiar cola de mensajes AS400 {
+chgmsgq msgq(*usrprf) dlvry(*break)
+}
+
+
+--- ALDON {
+Para agregar un OVRDBF a un tipo *file, usar op 32
+}
+
+
+# Credenciales eFile {
+Test 		fnunez 
+Password 	changeme
+
+Prod		fnunez
+Password	efileweb
+}
+
+
+--- Para ver eFile en AS400 {
+Al lado del File poner "EF"
+}
+
+
+--- Para conectarme con la notebook desde casa {
+1. Abrir americas.webaccess.kuehne-nagel.com e ingresar mi usuario
+2. Abrir RSA
+3. Entrar mi PIN
+4. Click en flechita y click en Copy
+5. Ingresar el Token code en la pantalla abajo del usuario
+}
+
+
+--- Acon {
+Alta de usuarios para mail:
+1.29.33
+}
+
+
+--- Para ver a que facturador se llama en un pais {
+WDTVL --> KNINSUMVAL y tomo nota del Document Type y del Document format
+WDOFM --> pongo Document Type (SALESINV por ej) y me lista todos los Document format
+}
+
+
+--- Rehabilitar usuario (asknudev) {
+chgusrknit 'BUERFIAJB'
+}
+
+
+--- Habilitar usuario (asknp03) {
+call chgusrknpg 'BUERFIAJB' (est� en la bibliioteca KNLUTL)
+}
+
+
+--- Cambiar autorizaci�n a objeto {
+knchgown object(ccolpco/coiv01r) objtype(*pgm) newown(knluser)
+}
+
+
+--- Para agregar usuario a un obj {
+WRKOBJ OBJ(QSYS/MAPOWN)
+}
+
+
+--- Para ver siglas/codigos paises {
+select * from cknlpdn/knlcielp
+}
+
+
+--- Para ver Fast Path y pgm que llama {}
+select * from csixldli.xafuncp
+where fufunc = 'BRSCANIAOL'
+}
+
+
+--- Para ver el F6 a q pgm llama y para ver opciones para facturar {
+xa/wpcfg
+CIEL
+4 PERUSER (por ej.)
+5 en Invoice Charge Summary
+Enter
+}
+
+
+--- Para ver opciones ingresadas en un File {
+1. Primero nombre de Panel
+2. xa/wpcfg --> CIEL, Panel, �
+3. En la columna 'Disp Mode', busco el *WW, 5 �, y me muestra las opciones y el pgm al q llaman.
+}
+
+
+--- Para ver la funci�n a q pgm llama si en xa/wpcfg tiene una func en vez de un pgm {
+xa/wfunc
+}
+
+
+--- Para liberar un file {
+Cuando pongo IN en un file y me da que esta en uso, le pongo RL, y luego IN. 
+Si no funciona, le pongo blancos al campo JBINUS del FFJOBSP para ese file.
+}
+
+
+--- Para facturar {
+Maritimo Expo : WSEJB
+Maritimo Impo : WSIJB
+Aereo Expo    : WAFEX
+Aereo Impo    : WAFIM --> este sirve tambien para las miscelaneas, o sea, todas las dem�s combinaciones, por ej XY, XZ.
+}
+
+
+--- Consultar Headers Invoice y reimprimir documentos {
+WAIVH (se puede consultar por: Internal Reference, Job Number, Invoice Number, Client ID)
+Luego, en el doc elegido le doy RP, aparece ventanita y ahi le pongo la output queue que tiene el FFDREQP para el doc (por ej CIELBOGNA) y Yes en hold
+Luego hago wrkoutq CIELBOGNA por ej y libero docs
+} 
+
+
+--- Para ver si la impresora est� arrancada {
+wrkwtr
+}
+
+
+--- Para ver si la impresora est� holdeada {
+wrkoutq y nombre de la impresora sin completar (por ej. wrkoutq BOGAPP*, wrkoutq MGTITP*) 
+Si no estuviera arrancada, 9 Work with Writers, F22 Start printer writer
+}
+
+
+--- En KMMT, se puede cambiar para que las impresoras no eliminen los spools {
+op 6, luego impresora (por ej MGTITPL01), luego op 2, ahi 'N' en "Delete processed spoolfile. .:" 
+}
+
+
+--- Para parar o rehabilitar facturaci�n en los paises {
+call knlstopr
+}
+
+
+--- Para que pueda facturar con mi usuario {
+Asknudev : XA/WUSPR, F22�, 10� en BUERFIAJB
+Asknp03  : SUPERUTL, F22�, 10�, BUERFIAJB�, 
+}
+
+
+--- Varios {
+WVATC 
+RBULK
+WSTSC (Status codes - RDDRQS.FFDREQP)
+}
+
+
+--- Para ver que pgm ejecuta Ciel (tengo q estar en el ambiente del pais) {
+1� WDTVL, KNINSUMVAL para ver validadores, por ej. Panam� la configuraci�n en Test es: SALESINV *COMMON.
+2� WDOFM, SALESINV � 5 en *COMMON � y en "Document Image Program" est� el nombre del pgm.
+}
+
+
+--- Para cuando no aparece en "F6" una FC a la cual hay q hacerle una NC: {
+FastPath : PEUTLNCR (este es de Per� por ej)
+Ingreso el IREF �, y luego F8 para confirmar
+}
+
+
+--- Para reimprimir en Per� que vaya al eFile {
+FastPath : PEUTLPRT 
+}
+
+
+--- Resend Invoice Image to eFile en Brasil {
+FastPath : BREINVP
+}
+
+
+--- Para ver si est� ejecutando el job de facturaci�n en un pais determinado {
+wrksbs, CSIAUTOLT (asknudev) 8�, CSIAUTOKNL (asknp03) 8�, PRTDRV (por ej. BOGTEST, SIATEST, etc.)
+wrkactjob sbs(csiautolt) job(prtdrv)
+}
+
+
+--- Para arrancar las interfaces en asknudev {
+ACONDAILY
+
+Si quiero que la interfaz tome nuevamente un registro hago:
+update ffinvhp    
+  set ivtrid='001'
+where ivttyp='INT'
+  and ivdpt='SE'  
+}
+
+
+--- Interface de Ciel - Acon en Robot {
+CLXXX_AC99 donde XXX = pais
+}
+
+
+--- Para setear las interfaces CIEL-ACON {
+ACONPARM
+}
+
+
+--- Para ver Clientes {
+WCLIE --> Aqui con 17 veo el tipo, con 12 veo datos relacionados con la cuenta 
+FSWCI1L1  Client/Invoice Type X-Ref --> Aqui busco los clientes con un tipo determinado
+}
+
+
+--- Para par�metros de impresi�n {
+WDOFM + F22, Document Type = SALESINV �
+
+select * from fswci1l1
+where ciityp='M02'    
+}
+
+
+--- Para facturar Bulk {
+En outlook, carpeta "Proceso Bulk", est� el proceso a seguir.
+Hay que elegir un cliente, ver que moneda tiene, y hacerle 2 facturas, una en un file y otra en otro file.
+}
+
+
+--- Para rehabilitar Punto de Venta {
+ARELEIR --> Argentina 
+EQELEIR	--> Ecuador 
+}
+
+
+--- Para enviarme spool file por mail {
+sndsplm
+}
+
+
+--- Proceso importacion Padron Ing Brutos (ARG) {
+Los usuarios ponen en la carpeta /KNLFS/Ciel/CABA el archivo CABA.zip y en carpeta /KNLFS/Ciel/AFIP el archivo Padron.zip
+A veces los bajan con un nombre err�neo, entonces hay que renombrarlos y ejecutar desde el rbo los sig procesos :
+ARCABAPER, ARRENTAS
+Para ver si corri� : 
+Rentas --> select * from cargpcd/arlog1p 
+Caba   --> select * from cargpcd/arlog3p 
+	   Control : select count(1) from cargpcd/arcabwp este count hay q compararlo con la cant del joblog en el rbo. Este contro se hace porque 
+	   cada tanto viene un caracter inv�lido y se trunca al copiar. El arreglo hay q hacerlo en el txt, y luego DO nuevamente.
+}
+
+
+--- AutoStart {
+wrksbsd, csiautoknl 8�, 5�, 3�
+
+Ejemplo de creaci�n entrada para AutoStart:
+Crear en Prod el job CHDMS (en el robot ya est� creado) para q quede schedule en el subsistema CSIAUTOKNL.
+Para ello crear la jobd STRGUDMS en biblioteca C339999KNL jobq CSIAUTO con el comando o Request data : CALL PGM(CGULPCO/GUDMS00C).
+}
+
+
+--- Para agregar Job al AutoStart {
+Commands 
+   1. Add Autostart Job Entry                                     ADDAJE 
+   2. Change Autostart Job Entry                                  CHGAJE 
+   3. Remove Autostart Job Entry                                  RMVAJE 
+
+Ejemplo de Oski PROD:
+ADDAJE SBSD(C339999KNL/CSIAUTOKNL) JOB(COMONIELEC) JOBD(C339999KNL/STRCOMONI)                                                                     
+Change effective next time subsystem starts.                             
+Active subsystem description CSIAUTOKNL in C339999KNL changed.  
+
+Ejemplo TEST:
+ADDAJE SBSD(DEVGPL/CSIAUTOLT) JOB(SIMONIELEC) JOBD(C339999KLT/STRSIMONI)
+Change effective next time subsystem starts.                            
+Active subsystem description CSIAUTOLT in DEVGPL changed.               
+}
+
+
+--- Para reimprimir en AR/EQ/PE {
+PEUTLPRT  (o las 2 primeras siglas del pa�s: AR/EQ) y se coloca el nro.impreso reclamado. Con F8 se reimprime y archiva.
+}
+
+
+--- Caso factura Bolivia {
+Actualic� el IHTOTF.KINIH1P con el valor 22063.20
+Hice RTV del clp BLIV01C y le coment� la linea que hace CALL KININ1 para q el core no recalcule el IHTOTF
+Luego, para que salga la factura con el usuario SRZPROD psw CIEL01, hice :
+ ===> sbmjob CMD(CALL PGM(BUERFIAJB/BLIV01C) PARM('' '' '        000084426' '002
+')) JOB(JBSRZ) USER(SRZPROD)
+Luego por pto. 6 de men� (con mi usuario) a la Queue CIELSRZAE y 6 (Release) al spool. Esto hace que se imprima y se archive.
+ojo! tal vez haga falta ponerle el form type, por ej, para las ND1 el CFBONOT1.
+}
+
+
+--- Caso factura Dominicana {
+Para que se archive nuevamente una factura:
+ ===> sbmjob cmd(call pgm(cdompco/rdiv01c) parm('' '' '        000021527' '001')
+) job(JBDOM) user(DOMPROD)
+}
+
+
+--- Caso factura Colombia {
+1.
+Modificar SIIV01C en la BUERFIAJB/QCLSRC para q no llame al KININ1 para q el core no recalcule el IHTOTF
+2. 
+update csiapad.ffdreqp        
+  set rdoutq = 'CIELMDEX1'    
+where trim(rddref)='000226883'
+  and rddreq='001'            
+3.
+ ===> sbmjob CMD(CALL PGM(BUERFIAJB/SIIV01C) PARM('' '' '        000226883' 'RRR
+')) JOB(JBSIA) USER(SIAPROD)
+Job 701084/SIAPROD/JBSIA submitted to job queue ACONBBOGJQ in library QGPL.      
+}
+
+
+--- IFACERE {
+Contacto Guatemala: support@megaprint.freshdesk.com
+}
+
+
+--- Ejemplo pgm para enviar mensajes con variables {
+KNLCVRT/QCLSRC --> EPSRTVMSG <-- EPS01R / EPS02R
+
+En mi biblioteca --> jbrtvmsgr, jbrtvmsg
+}
+
+
+--- Ejemplo pgm envio y borrado de mensajes a pgm {
+KNRMVMSG
+KNSNDMSG
+BRMRUC01R
+}
+
+
+--- Para debug facturador {
+  Para el job de facturación en WRKSBS --> PRTDRV del pais en cuestión
+  PRTDRV --> CALL PGM(FFDX16C) PARM(' ' '02001213774100001' '%')
+  Ver el parámetro que se usa en el pais, arrancar el debug para el facturador y luego ejecutar el FFDX16C.
+}
+
+
+--- Para arrancar un PRTDRV de un pais determinado (ej Honduras) {
+  Entro a Ciel con el usuario HNDTEST (el mismo q corre el PRTDRV) y contrase�a CIEL01.
+  Luego ejecuto fast path AJDOCR
+}
+
+
+--- Para arrancar un subsistema {
+  STRSBS NombSbs
+}
+
+
+--- Perú {
+  PERECOVE
+}
+
+
+--- Facturaci�n CORE {
+En los paises donde la facturaci�n es puramente core, el nro de factura es el IVINVN.FFINVHP
+}
+
+
+--- Carpeta para Java Guatemala {
+  /QOPENSYS/QIBM/ProdData/JavaVM
+}
+
+
+--- Jira para Vacaciones {
+  SCAMISC-67
+}
+
+
+--- Para asociar una Output Queue a un Usuario y Form Type { 
+  woutq
+}
+
+
+--- Para archivar y no imprimir {
+  En los facturadores poner la outq CIELKNLEF en la outq
+}
+
+
+--- Para que salga impresión tiene que existir el sig setup: {
+  wdofm
+  SALESINV
+
+  y en CO1 por ej (Colombia):
+  Overlay Codes  Original/Copy :  IX    invoice image    XX    No overlay - us 
+  Number of Originals/Copies . :    1             Protect Origs/Copies : Y Y
+
+  Esto, en el spool file aparece:
+  File        User        Queue       User Data   Sts   Pages    Page  Copy
+  COIV01P     BOGTEST     CIELBOGAE   IX00XX00    RDY       1             1
+  COIV01P     BOGTEST     CIELMGTXX   IX00XX00    RDY       1             1
+  COIV01P     BOGTEST     CIELMGTXX   IX01XX00    RDY       1             1
+
+  Los que tienen IX00XX00 no salen impresos, los que tienen IX01, si.
+}
+
+
+--- Para saber por que impresora sale una factura {
+  Mirar en FFDREQP que output queue tiene
+  Con ese nombre ir a kmmt op 1, y abajo del la output queue aparece el nombre de la impresora
+  En la op 2 del kmmt, en Search value le pongo la Output Queue
+}
+
+
+--- NumeradorDelSalesInvNo {
+  FFNXNOP
+}
+
+
+--- Para ver numeradores {
+  wnoid
+  Position to . . . . INV 
+  por ej. wnoid + F22, luego INVNUMBER �, luego 10 � � 5 �
+}
+
+
+--- Argentina {
+Aplicación padrones CABA & ARBA :
+Para obtener los archivos Padron.zip (en /knlfs/Ciel/AFIP) y CABA.zip (en /knlfs/Ciel/CABA) ejecutar desde el robot los procesos :
+(previamente el usuario debe dejar en las carpetas correspondientes los archivos de input mencionados arriba)
+ARCABAPER y ARRENTAS
+
+El CABA.zip suele venir de la AFIP con registros corruptos, con caracteres especiales al final del registro, por ej. "?</".
+Para encontrar el registro en as400 es conveniente buscarlo por DNI. 
+Para arreglarlo, abrir el CABA.zip con el 7-Zip, modificar y cuando salgo, el pgm me pregunta si quiero salvar, le doy si, y automáticamente regenera el CABA.zip.
+}
+
+
+--- COMFIAR {
+Facundo Fandino 5368-2280 primero marcar 2
+
+Credenciales Ecuador
+user: KN-WS-ECUADOR
+pass: KNWS123456
+}
+
+
+--- Para dar autorización a usuario a un pais {
+wuser
+Dar de alta el usuario: copiar mi usuario con 3
+Luego entro con op 11 y le pongo la Company y los Allow todos en 'Y'
+}
+
+
+--- ACON (alta de Branch/NO-BO) {
+entrar en Acon
+luego OP 1-46
+
+select *                     
+from acondbue.acf9repf       
+where f9vbce = '71'          
+  and f9vcce = 'EBILLBRANCH' 
+}
+
+
+--- Para probar Argentina en TEST {
+Le pongo cualquier cosa en el arivrcp, por ej: 
+update arivrcp                               
+  set iccain=69096006343845, iccaid=20190327 
+where trim(ihiref)='000071959'               
+
+Luego:
+call      'ARIV01LC'                         
+parm                    PARM1             2  
+parm      'SALESINV'    PARM8            10  
+parm                    IREF                 
+parm      'RRR'         REQID             3  
+}
+
+
+--- Ejemplo F4 {
+BRCINVVRT/QDDSSRC	BRMRUC02D
+BRCINVVRT/QRPGLESRC	BRMRUC02R 
+}
+
+
+--- Envio msg con variables a pgm {
+KNSNDMSG
+BRMRUC02R
+}
+
+
+--- Ejemplo mover registro completo {
+AC067R72
+}
+
+
+--- Para ponerme como superusuario {
+wemor 
+si no estoy, F6 y 4 BUERFIAJB (ver el de Flavio por ej.)
+}
+
+
+--- FTP (en linea de comandos de la PC) {
+cmd
+cd/
+cd ftp
+ftp asknudev.int.kn
+buerfiajb
+password
+get brcinvvrt/qrpglesrc.brmrucmpr brmrucmpr.txt
+quit
+exit
+}
+
+
+--- Habilitar usuario en ACON {
+update acondtsjo.acblrel4  
+  set bld9na = 1211231     
+where bldwtx='BUERFIAJB'   
+}
+
+
+--- Buscar Charge code 950 en Jira {
+project = SCIFF AND summary ~ 950
+}
+
+
+--- Ejemplos free format completo {
+CRDMSWSR
+CRECONR
+CRIVV00R
+CUSTBRZR
+}
+
+
+--- Zscaler - Pulse Segure {
+Para conectarme con Pulse, voy al iconito de zscaler, le doy open, y luego sign out.
+Cuando estoy conectado con Pulse, si quiero que me ande el zoom, tengo que tener en Internet Options, connections, 
+LAN settings (Proxy Settings):
+marcar en Use automatic configuration script, luego poner en Address: http://pac.zscaler.net/kuehne-nagel.com/zscaler.pac
+Conectado con zscaler, en Address normalmente tengo: http://127.0.0.1:9000/localproxy-1585764041.pac
+]
+
+
+--- RPG: dias entre 2 fechas {
+NDAYS= %DIFF(AUXDTTO:AUXDTFM:*DAYS);
+
+CRCINVVRT/QRPGLESRC/CREIVGENR
+d duedate         s               d  
+d invdate         s               d  
+NumDias = %diff(duedate :invdate:*d); 
+duedate = %date(ivddat:*iso) ;
+invdate = %date(ivcdat:*iso) ;
+}
+
+
+--- Task Manager {
+Ctrl + ALT + Supr
+o tambien abrir ventana windows, tipear 'task manager', y aca veo entre otras cosas la performance, uso de CPU, de RAM, etc.
+}
+
+
+--- Consumo RAM Window 10 {
+  Task Manager --> Performance --> Memory
+}
+
+
+--- Windows 10 Combinaci�n de teclas {
+Alt + F4 							      	--> Cierra ventana activa
+Window + Flecha arr 						--> Maximiza pantalla
+Window + Flecha aba 						--> Minimiza pantalla
+Window + M							    	--> Oculta todas las pantallas 
+Window + Shift + M 							--> Restaurar todas las ventanas cerradas con la combinaci�n anterior 
+Window + Tab						    	--> Muestra todas las ventanas abiertas
+Window + Shift + S							--> Recorte pantalla 
+Window + D         							--> Ocultar todas las pantallas / Volver a mostrarlas todas (sin cerrar)
+Window + R 							    	--> Ventana de comandos 
+Window + Alt + D					  		--> Calendario
+Window + E 							    	--> Explorador
+Window + nro						    	--> Muestra ventana de Tarea nro en la barra de tareas
+Window + Flecha der							--> Pone la pantalla actual a la derecha
+Window + Flecha izq							--> Pone la pantalla actual a la izquierda
+Window + '+'/'-'					  		--> Pone la lupa en donde esta el cursor
+Window + ImPan						  		--> Captura la im�gen de la pantalla actual y la pone en el portapapeles (o ditto)
+Window + Pausa 						  		--> Informaci�n del Sistema
+Window + A 							    	--> Abrir panel de acciones o centro de notificaciones
+Window + B 							    	--> Activa Flecha de iconos ocultos (al lado de la pila)
+Window + I 							    	--> Abre configuraci�n de Windows
+Window + L 							    	--> Bloquear PC
+Window + T 							    	--> Previsualizaci�n de la barra de tareas
+Window + V 							    	--> Portapapeles (como ditto)
+Ctrl + Window + D 							--> Abre escritorio Virtual
+Ctrl + Window + F4							--> Cerrar escritorio Virtual
+Ctrl + Window + Flecha izq/der				--> Navegar entre escritorios Virtuales
+Ctrl + Alt + Tab					  		--> Muestra todas las ventanas abiertas
+Ctrl + Shift + Esc							--> Task Manager (para cerrar un pgm que no contesta por ej)
+k									        --> Parar/Arrancar reproducci�n de video
+f									        --> Entrar/Salir de pantalla completa en navegador
+}
+
+
+--- Para medir conexion a internet {
+https://www.speakeasy.net/speedtest/
+}
+
+
+--- CASS Colombia {
+select GA_ITEM_TYPE, GA_ITEM_NO, GA_TRAFF_REF, GA_FILE_NO, 
+       GA_CHG_CODE,  GA_LCY_AMT *.01                       
+from airedipf                                              
+where GA_CRT_DATE = 1180730                                
+  and GA_CHG_LN_NO > 0                                     
+}
+
+	
+--- Ver doc por eFile (op EF/EX AS4GETN) {
+  1. click en tecla windows
+  2. ir a DirectMedia
+  3. click en DirPCCmd Server
+  4. EX/EF en el File seleccionado
+}
+
+
+--- Para debug de un pgm dentro del WSEJB {
+  call FSBEB3CC ('' 'WSEJB' '' '' '' '1' '125E' '' 'JOB')
+}
+
+
+--- Validador op 14 {
+  KNIVV00R
+}
+
+
+--- Cambiar fuentes y correcciones gramaticales [
+  En Inicio tipear:
+  Typing Settings
+}
+
+
+--- PluralSight {
+  click en la J --> History --> click en el icono de certificado
+}
+
+
+--- Para ver en que SBS (subsistema) se corre un job {
+  ver primero cuál es la jobq del job y luego:
+  wrkjobqd xxx
+}
+
+
+--- Alert Panel Brasil {
+  BRINVALE
+  Este monitor no refresca solo.
+  Los que estan en violeta, si tienen algún problema de timeout o connect refused, se le de RX.
+  RI para los 
+}
+
+
+--- para cambiar outq en ventanita de facturaci�n {
+  WOUTQ y ahi tengo todas las outq por branch / depto
+}
+
+
+--- WeekPlan {
+  https://wpn.int.kn/overview?date=2021-01-11
+}
+
+
+--- IOPM {
+  SELECT * FROM mapkn.kmsttldp     
+  WHERE TLDIOQ = 'MAPEMLBR'        
+    AND TLDPRM like '%20NF3418311%'
+}  
+
+
+--- Enviar txt por mail {
+  CPYTOPCD FROMFILE(BRCINVVRT/QRPGLESRC) TOFLR('KNLABUE') FROMMBR(BRMRUCMPR
+  ) TODOC(BRMRUCMR.TXT) REPLACE(*YES)                                      
+
+  SNDDST TYPE(*DOC) TOINTNET(('jorge.bardaro@kuehne-nagel.com')) DSTD('Moni
+  tor CR') MSG('Monitor CR') DOC(BRMRUCMR.TXT) FLR(KNLABUE)                
+}
+
+
+--- NGK {
+  Cuando aparece el siguiente mensaje los usuarios deben contactar a NGK:
+  (FNN1004) WARNING: Next Numbers Re-Order Level reached for INVNUMBER
+
+  Es el numerador del Sales Invoice Number del core de CIEL que se lleno, nosotros no lo podemos actualizar 
+  ya que no temenos acceso a WNOID (el fastpath que lo actualiza) asi que le tienen que abrir un ticket a NGK.
+}
+
+
+--- External info {
+  Para SIA(76) WRKMBRPDM FILE(MAPKN/KMSTE00037) MBR(EX1COSI*)
+  Para COL(75) WRKMBRPDM FILE(MAPKN/KMSTE00037) MBR(EX1CO*)
+}
+
+
+--- ICBC {
+  0720035930000010118051
+} 

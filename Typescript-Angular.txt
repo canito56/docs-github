@@ -1,0 +1,70 @@
+--- {
+tsc -v 					(versión de typescript - en cmd)
+ng version				(versión de angular - en cmd)
+ng new nombre-proyecto	(dentro de la carpeta del proyecto - en cmd, o si estoy en vsc, dentro de la carpeta programacion)
+	y 					(a la primera pregunta: Would you like to add Angular routing? (y/N) Y)
+	CSS					(elijo este y enter y empieza a instalar paquetes, tarda un rato)
+npm i @angular/cdk --save
+
+src/index.html
+		aqui agrego link de boostrap (es el que figura como CSS)
+		agrego link de font awasome cdn (copio el primero listado, aqui copy link tag, icono </>)
+
+voy al link ngx-toastr y copio la instrucción de install (npm install ngx-toastr --save), luego voy a la terminal de VSC y 
+	la ejecuto (eso es para los mensajes).
+	en esta misma página busco las animaciones: npm install @angular/animations --save (si no pongo el --save lo instala local,
+	si le dejo --save, lo instala global, que es lo que voy a hacer)
+	más abajo dice: if you are using angular-cli you can add it to your angular.json, entonces copio lo siguiente:
+		"node_modules/ngx-toastr/toastr.css" y lo pego en angular.json debajo de "styles" (como una linea más del array "styles"),
+	más abajo en step 2, me copio 'import { BrowserAnimationModule } ...' y 'import { ToastrModule } ...' y los pego en 
+	src/app/app.module.ts arriba después de los otros imports. 
+	más abajo (de lo anterior), en donde dice '@NgModule({...', me copio lo siguiente:
+			BrowserAnimationsModule, // required animations module
+			ToastrModule.forRoot(),
+		y los pego en imports: [...]
+				
+luego en la terminal del VSC: ng g class models/news  --skipTests (creo la clase news, saltando los tests, en la carpeta models, 
+	este es un componente)			
+	
+luego: 	ng g c news/list-news --skipTests --flat 	(la c es de component, --flat para q no cree carpeta)
+		ng g c news/detail-news --skipTests --flat
+		ng g c news/edit-news --skipTests --flat
+		ng g c news/create-news --skipTests --flat
+		ng g s service/news --skipTests				(s de service, --flat no es necesario, no crea carpeta para servicios)
+		
+ng serve -o		(para compilar y arrancar Angular)	
+
+### cuando hay errores que persisten se puede probar con lo siguiente: npm cache clear --force	
+}
+
+
+--- Angular Material {
+### Instalación:
+npm i @angular/material@11.2.12 @angular/cdk@11.2.12 / ng add @angular/material@11.2.12
+
+mat-elevation-z8
+}
+
+
+--- crudBACK-master {
+Para que ande le hice:
+npm i @angular/cdk --save
+
+Modifiqué el tsconfig.app.json del crudFRONT-master, le agregué la sentencia "angularCompilerOptions": { "enableIvy": "ngtsc" }
+el tsconfig.app.json quedó asi:
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": []
+  },
+  "angularCompilerOptions": { "enableIvy": "ngtsc" },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "src/test.ts",
+    "src/**/*.spec.ts"
+  ]
+}
+}

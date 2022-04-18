@@ -1,0 +1,218 @@
+
+--- Para reiniciar servidor automáticamente en c/cambio {
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-devtools</artifactId>
+	<scope>runtime</scope>
+	<optional>true</optional>
+</dependency>
+}
+
+
+--- Para utilizar tags jstl en el jsp {
+agregar en el pom.xml la siguiente dependencia:
+	<dependency>
+  		<groupId>javax.servlet</groupId>
+  		<artifactId>jstl</artifactId>
+  		<version>1.2</version>
+  	</dependency>
+
+y en los jsp hay que poner:
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+}
+
+
+--- Para Tomcat anteriores a 10.0 (pom.xml):
+  <dependencies>	
+  	<dependency>
+  		<groupId>javax.servlet</groupId>
+  		<artifactId>javax.servlet-api</artifactId>
+  		<version>3.1.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>mysql</groupId>
+  		<artifactId>mysql-connector-java</artifactId>
+  		<version>8.0.20</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.apache.commons</groupId>
+  		<artifactId>commons-dbcp2</artifactId>
+  		<version>2.0</version>
+  	</dependency>
+  </dependencies>
+  
+--- Para Tomcat 10.0 (pom.xml)
+  <dependencies>
+    <dependency>
+        <groupId>jakarta.servlet</groupId>
+        <artifactId>jakarta.servlet-api</artifactId>
+        <version>5.0.0</version>
+        <scope>provided</scope>
+    </dependency>
+    <dependency>
+        <groupId>jakarta.servlet.jsp</groupId>
+        <artifactId>jakarta.servlet.jsp-api</artifactId>
+        <version>3.0.0</version>
+        <scope>provided</scope>
+    </dependency>
+    <dependency>
+        <groupId>jakarta.el</groupId>
+        <artifactId>jakarta.el-api</artifactId>
+        <version>4.0.0</version>
+        <scope>provided</scope>
+    </dependency>
+    <dependency>
+        <groupId>jakarta.websocket</groupId>
+        <artifactId>jakarta.websocket-api</artifactId>
+        <version>2.0.0</version>
+        <scope>provided</scope>
+    </dependency>
+    <dependency>
+        <groupId>jakarta.security.enterprise</groupId>
+        <artifactId>jakarta.security.enterprise-api</artifactId>
+        <version>2.0.0</version>
+        <scope>provided</scope>
+    </dependency>
+  </dependencies>  
+  
+  รณ:
+  
+  <dependencies>
+    <dependency>
+        <groupId>jakarta.platform</groupId>
+        <artifactId>jakarta.jakartaee-web-api</artifactId>
+        <version>9.0.0</version>
+        <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+--- Para Tomcat 10.0 (en Web.xml)
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+  <display-name>Web-News</display-name>
+  <servlet>
+  	<servlet-name>ProductoController</servlet-name>
+  	<servlet-class>com.jb.controller.ProductoController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ProductoController</servlet-name>
+	<url-pattern>/producto</url-pattern>  	
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Web-News</display-name>
+  <servlet>
+  	<servlet-name>ProductoController</servlet-name>
+  	<servlet-class>com.jb.controller.ProductoController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ProductoController</servlet-name>
+	<url-pattern>/producto</url-pattern>  	
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
+
+--- Para Tomcat 9.0 (pom.xml)
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Crud-Products</groupId>
+  <artifactId>Crud-Products</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.3</version>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+  	<dependency>
+  		<groupId>jakarta.servlet</groupId>
+  		<artifactId>jakarta.servlet-api</artifactId>
+  		<version>5.0.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>jakarta.servlet.jsp</groupId>
+  		<artifactId>jakarta.servlet.jsp-api</artifactId>
+  		<version>3.0.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>jakarta.servlet.jsp.jstl</groupId>
+  		<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+  		<version>2.0.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>javax.servlet</groupId>
+  		<artifactId>javax.servlet-api</artifactId>
+  		<version>4.0.1</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>javax.servlet.jsp</groupId>
+  		<artifactId>javax.servlet.jsp-api</artifactId>
+  		<version>2.3.3</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>javax.servlet</groupId>
+  		<artifactId>servlet-api</artifactId>
+  		<version>3.0-alpha-1</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>mysql</groupId>
+  		<artifactId>mysql-connector-java</artifactId>
+  		<version>8.0.24</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.apache.commons</groupId>
+  		<artifactId>commons-dbcp2</artifactId>
+  		<version>2.8.0</version>
+  	</dependency>
+  </dependencies>
+</project>
+
+--- Para Tomcat 9.0 (web.xml)
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Web-News</display-name>
+  <servlet>
+  	<servlet-name>com.jb.controller.ProductoController</servlet-name>
+  	<servlet-class>com.jb.controller.ProductoController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>com.jb.controller.ProductoController</servlet-name>
+	<url-pattern>/producto</url-pattern>  	
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
+ 

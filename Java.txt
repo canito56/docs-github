@@ -1,0 +1,76 @@
+
+--- Project Web Maven {
+New --> Maven Project --> Next --> Filter: webapp y elegimos Group Id: org.apache.maven.archetypes y Artifact Id: maven-archetype-webapp 
+}
+
+--- Project Lombok {
+Project Lombok is a java library that automatically plugs into your editor and build tools, spicing up your java.
+Never write another getter or equals method again, with one annotation your class has a fully featured builder, Automate your logging variables, and much more.
+
+Genera código java que yo no veo pero esta, por ej, con la anotación @Data en la clase de una entidad (public @Data class User{}), solo necesito declarar los atributos, pero no los getters y setters, estos me los genera lombok, aunque no aparezcan en el código, pero en la ventana Outline si se ven.
+
+https://projectlombok.org/download
+
+esto me baja el lombok.jar y lo ejecuto.
+en el pom.xml busco lombok y lo agrego.
+}
+
+
+--- Ejecutable con Spring Boot {
+Run as --> Maven Build... --> Goals: package --> Run
+esto genera un .jar
+}
+
+
+--- Selenium {
+En pom.xml busco: selenium y elijo Group Id: org.seleniumhq.selenium  y Artifact Id: selenium-java 
+}
+
+
+--- Insertar html dentro de otro {
+
+<iframe src="nav.html" width="880" height="120"></iframe>
+
+<body>
+	<div class="container">
+		<header>
+			<nav></nav>
+		</header>
+	...
+	...
+	<script src="functions.js"></script>
+	    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'nav.html');
+        xhr.setRequestHeader('Content-Type', 'text/plain');
+        xhr.send();
+        xhr.onload = function (data) {
+            document.querySelector("nav").innerHTML = data.currentTarget.response;
+        };
+    </script>
+</body>	
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div class="menuContainer"></div>
+</body>
+
+  <script>
+    $(document).ready(function () {
+      $('.menuContainer').load('./menu.html');
+    });
+  </script>
+</html>
+
+<frame src="izquierdo.htm" />
+
+<link href="nav.html" rel="import" />
+<script jslvar getimport=document.querySelector('link[rel=import]'></script>
+
+}

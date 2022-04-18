@@ -1,0 +1,296 @@
+
+--- GIT commands {
+Instalar GIT desde:
+www.git-scm.com 
+
+
+--- pasos q conviene seguir:
+git init 										para decirle que empiezo a utilizar git para el proyecto en el cual estoy parado
+git remote add origin https://github.com/canito56/pruebagit.git		con esto luego puedo usar origin en vez de el link completo.
+git switch master	 							nos pasamos a la branch master
+git pull origin master							bajamos todo de la master del repositorio externo
+git branch miBranch 							creo una branch nueva en mi carpeta
+git switch miBranch								me paso a la nueva branch
+modificamos el código
+git add .										agregamos los cambios al stage
+git commit -m "mi mensaje"						pasamos todo al repositorio local
+git push origin miBranch						pasamos todo al repositorio externo miBranch
+git switch master								me paso a la master
+git merge miBranch								mergea los cambios mios con la master
+git push origin master							pasa todos los cambios al repositorio externo master
+
+
+--- Comandos
+$ add
+git add	nom_archivo.ext 						para agregar un archivo al stage
+git add .										esto agrega todos los archivos al stage.
+git add * 										agrega cambios que estan en el working dir de otra branch 
+
+$ branch
+git branch										me muestra las versiones de mi proyecto
+git branch miBranchNueva						crea una nueva branch llamada miBranchNueva 	
+git branch -a 									muestra las branch locales y las remotas (en el repositorio)	
+git branch -m <current name> <new name>			renombrar una branch
+git branch -m <new name for current branch>		renombrar una branch en la cual estoy trabajando
+git branch -d miBranch							borra la branch que cree y q ya no voy a usar de mi copia local, pero si todavia no hice el
+												  merge, me va a dar un error (tengo q estar en otra branch).
+git branch -D miBranch							fuerza borrado de branch, aunque no haya hecho merge todavia (tengo q estar en otra branch)
+git branch -M master							se cambia al branch master
+git branch --merged								muestra las branch que hemos mergeado hasta ahora
+
+$ checkout
+git checkout miBranchNueva 						para cambiarme de branch
+git checkout -- nombreArchivo.ext				deshace cambios y se refleja inmediatamente en el VSC. En el IDE los cambios desaparecen inmediatamente.
+git checkout nombreArchivo						deshace cambios cuando esta en el stage, luego del add
+git checkout -- .								vuelve todos los cambios para atras hasta el último commit. Si agrego una linea en un fuente,
+												  salvo y luego este cmd, me quita la linea del fuente.
+git checkout --track origin/<feature4>			Switched to a new branch 'feature4' Branch 'feature4' set up to track remote 	branch 'feature4' from 'origin'.
+
+$ clone
+git clone https://github.com/canito56/nodejs-mysql-connection-jb	para copiarme el proyecto desde github (repositorio externo). 
+git clone <remote-url>							clonar proyecto a mi pc. Pero primero, si estoy en un proyecto de otro, le doy fork y mueve
+												  todo a mi github (esto lo hace github, cosa de magia).
+
+$ commit
+git commit										crea el primer snapshot o punto de partida o foto en el repositorio de mi maquina
+git commit -m "Agregue un gitignore"			con -m me evito de entrar al editor y agrego mensaje directamente
+
+git commit -am "mensaje"						hace el add . y el commit en un solo paso
+git commit --amend								para modificar un commit, por ej si agregué un archivo con add, con esto no necesito hacer
+												  un nuevo commit, lo agrega al q ya estaba, incluso me abre el vim p modificar el mensaje.
+git commit --amend -m "nuevo msg del commit"	modifica el mensaje del commit
+
+$ config
+git config --global user.name "jorge"						para configurar todos los repositorios locales
+git config --global user.email "jorge.bardaro@gmail.com"	para configurar todos los repositorios locales
+git config --local user.email "jorgebardaro@yahoo.com"		para configurar otro correo para otro repositorio local 
+git config --global credential.username "jorge.bardaro"		para cambiar la credencial en KN GIT 
+git config --list											para ver mi configuracion en git
+
+$ diff
+git diff										dif entre working directory y commit (repositorio local). Todas las dif presentes.
+git diff origin/master							muestra lo que hay de distinto entre repo local y remoto.
+git diff nombre_archivo.ext 					Para ver los cambios en un archivo pero conserva el anterior commit 
+git diff --cached								dif entre stage y commit (repositorio local).
+git diff HEAD									dif entre working dir, stage y commit, o sea, todas las diferencias.
+git diff --base <file>							dif con respecto al archivo base.
+git diff <branch1> <branch2>					para ver diferencias entre branches.
+git diff <branch1>...<master>					dif en master desde que branch1 fue creada desde master.
+git diff <branch1> <branch2> <file>				dif en un file q esta en diferentes branches.
+git diff 5e93fda								diff en un archivo (al q hice cambios) entre working dir y primer commit (5e93fda). 
+git diff 9651ab9 846c3d9						muestra diferencias entre commits, no hace falta poner el nro entero del commit.
+
+$ fetch
+git fetch origin								busca todos los files del repositorio remoto q no estan en el local.
+git fetch origin <branch>						trae desde una branch en repo remoto a un nuevo dir (ej. si simulo trabajar en otra pc).
+
+$ gc
+git gc											limpia files innecesarios y optimiza el repo local.	
+
+$ grep
+git grep "algo-a-buscar"						busca una algo en todos los archivos del dir en donde estoy parado (a veces hay q salir con q). 
+
+$ init
+git init										para decirle que empiezo a utilizar git para el proyecto en el cual estoy parado
+
+$ log
+git log											para ver todos los commits que hice.
+git log origin/master							muestra todos los commits incluidos los del repo remoto.
+git log --oneline								muestra todos los commits que hice (historia) en forma simplificada.
+git log <branch> --oneline						idem anterior pero de una branch en la q no estoy trabajando.
+git log -1										para ver el último commit, si hiciera -2, mostraria los dos últimos commits.									
+git log --stat 									para ver que archivos se modificaron en los commmits que fui haciendo.
+git log --patch									muestra más detalle en los commits.												  
+
+$ merge
+git merge miBranch 								mezcla cambios de miBranch con la branch en donde estoy parado.
+git merge --abort								aborta merge cuando tengo conflictos.
+
+$ pull
+git pull										trae los archivos q no estan en el repositorio local, es una combinacion de fetch y merge.
+git pull origin master							baja la version del repositorio del branch master a mi maquina
+
+$ push
+git push 										pasa todo desde el repo local al repo remoto.
+git push -u origin <branch>						pasa una branch nueva al repo remoto.
+git push https://github.com/canito56/nodejs-mysql-connection-jb master		--- Pasa todo a la carpeta en github 
+git push origin master							pasa todos los cambios ya mergeados al master 
+git push origin --delete miBranch				borra la branch que cree y q ya no voy a usar del repositorio externo
+
+$ reflog
+git reflog										muestra historial de lo que fui haciendo (no solo commits) con detalle en una linea.
+
+$ remote
+git remote -v 									muestra dir remoto externo y como se llama (por ej. origin).
+git remote update								muestra cuantos objetos hay en el repositorio remoto, entre otras cosas. Si luego hago 
+												  git status, me muestra si hay algun archivo q no tengo en el repositorio local y me sugiere
+												  traerlo con pull.
+git ls-remote									muestra las branch en el repo remoto.
+git remote set-url Origin https://github.com/user/repo2.git			Change the 'Origin' remote's URL
+
+$ reset
+git reset										deshace el add 
+git reset --soft HEAD~1							deshace commit conservando los cambios
+git reset --hard HEAD~1 						deshace commit y descarta los cambios 
+
+$ restore
+git restore --staged <file>						deshace el stage 												  
+git restore nombreArchivo						Si yo tenia un archivo en el stage, luego hice cambios, y quiero descartar estos últimos.			
+
+$ revert
+git revert 74a1092								deshace un commit ya publicado y crea un nuevo commit que deshace los cambios del anterior, 
+
+$ rm
+git rm --cached eggnog_latte.txt				git deja de seguir a este archivo, sin eliminarlo, aunque ya este en el repositorio remoto.
+git rm <filename>								delete from repo and local filesystem.												  
+git push origin --delete miBranch				borra la branch que cree y q ya no voy a usar del repositorio externo
+
+$ show
+git show 8e78206								dif en un archivo entre el commit original y los últimos cambios.
+
+$ stash
+git stash										saved working directory and index state WIP on nombreBranch
+git stash list 									por ej: stash@{0}: WIP on jorge_desa: 307eedf rename vendors.txt remove eggnog_latte.
+git stash show									detalle de lo anterior.
+
+$ status
+git status										muestra los archivos que tengo para pasar, todavia no comiteados
+git status -s									muestra lo mismo que git status pero con menos info, s es de short
+
+$ update
+git update-git-for-windows						para actualizar git
+
+$ tag
+git tag	1.1.0 <commitID>						marca commit especifico. Se usa para marcar puntos de lanzamiento com v1.0 o v2.0
+
+$ interfaz gráfica
+gitk											muestra interfaz gráfica p el repo local.								
+
+--- Rebase
+git merge-base <branch> master					muestra SHA, por ejemplo 9e770fbf3c9ff320f985988a8071b875d76cecc3, q corresponde al commit base.
+git rebase -i 9e770fb							genera un solo commit en base a todos los anteriores. El nro 9e770fb es el del 1er commit.
+												  Git me abre un archivo donde muestra cada commit con la palabra "pick" primero, entonces 
+												  reemplazo "pick" por "squash" en el archivo y lo salvo (con esto le estoy diciendo q quiro
+												  compactar los q dicen squash en el q dice pick). Cuando salgo, Git muestra un mensaje
+												  de cada commit involucrado en el rebase, le borro los primeros y dejo el último, y si quiero,
+												  agrego a continuación del último mensaje algún texto. Si hago git log --oneline, veo q tengo
+												  solo el último commit.
+												  
+--- Para usar cherry-pick						sirve para copiar commits a otras branch (si tengo un conflicto por ej.)
+git log --oneline 								find the commit you want
+git log <branch>								list log from another branch
+git checkout <branch>							where do you want to put the commit?. Checkout that branch.
+git cherry-pick <commit-sha>					perform the cherry-pick to append the specified commit to HEAD												  
+
+--- Notas:
+En github, con "Add File", puedo crear un archivo, luego darle commit (bien abajo), y luego traerlo al repositorio local con pull.
+}
+
+
+--- GITHUB Agustin Sirvent {
+https://github.com 
+canito56
+Jorbar56---
+agustinsirvent@yahoo.com.ar
+
+Entro en Sign In con canito56 y Jorbar56---
+
+Luego le doy a New repository, pongo un nombre, una descripcion (aqui es importante ponerle el mismo nombre que tiene en el VSC), luego 
+le marco publico (porque si no pago), y crear.
+Luego lo crea, y arriba en el navegador tengo por ej: https://github.com/canito56/git-course1
+Luego copio lo siguiente: git remote add origin https://github.com/canito56/git-course1.git
+	y en linea de comandos del bash, con boton derecho, lo pego y doy enter.
+	Luego copio: git push -u origin master y lo pego en linea de comandos y enter.
+	Me aparece una ventanita pidiendo usuario y contraseña, se lo pongo y luego en linea de comandos me da el sig mensaje:
+		Enumerating objects: 11, done.
+		Counting objects: 100% (11/11), done.
+		Delta compression using up to 4 threads
+		Compressing objects: 100% (7/7), done.
+		Writing objects: 100% (11/11), 1.06 KiB | 541.00 KiB/s, done.
+		Total 11 (delta 2), reused 0 (delta 0)
+		remote: Resolving deltas: 100% (2/2), done.
+		To https://github.com/canito56/git-course1.git
+		 * [new branch]      master -> master
+		Branch 'master' set up to track remote branch 'master' from 'origin'.
+	Entonces ahora recien subio todo lo que habia creado para la version. Refresco la pantalla en GitHub y veo todo lo que subio.
+Luego agrego el archivo README, y le doy (bien abajo), Commit new file.
+
+Para bajar todo otra vez a mi PC, por ej borro toda la carpeta (primero cierro en VSC y el bash), luego copio la direccion del proyecto
+en github (por ej: https://github.com/canito56/git-course1.git, abro el bash, voy hasta la carpeta de donde tiene que colgar el proyecto,
+y en linea de comandos le doy: git clone https://github.com/canito56/git-course1.git, enter y me da el sig mensaje:
+	Cloning into 'git-course1'...
+	remote: Enumerating objects: 14, done.
+	remote: Counting objects: 100% (14/14), done.
+	remote: Compressing objects: 100% (8/8), done.
+	remote: Total 14 (delta 3), reused 10 (delta 2), pack-reused 0
+	Unpacking objects: 100% (14/14), done.
+}
+
+
+--- GITHUB Jorge Bardaro {
+usuario: 	jorgeBardaro  ó  jorge.bardaro@gmail.com
+pwd:		nora7986
+}
+
+
+--- GITxxxx Alejandro Abate {
+username: AAbate
+password: Passabate01
+}
+
+
+--- Tips {
+	El pull para actualizar un proyecto, por las dudas, hacerlo siempre después de tener la versión actual comiteada.  
+
+cuando creo proyecto nuevo (…or create a new repository on the command line):
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/canito56/proyecto2.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/canito56/proyecto2.git
+git branch -M main
+git push -u origin main
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+}
+
+
+--- .gitignore {
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+--- STS ---
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+--- IntelliJ IDEA ---
+.idea
+*.iws
+*.iml
+*.ipr
+
+--- NetBeans ---
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+--- VS Code ---
+.vscode/
+}
+

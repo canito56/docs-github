@@ -1,0 +1,4 @@
+
+--- Comandos {
+Ctrl + T			Encontrar cualquier cosa inmediatamente
+}

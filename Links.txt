@@ -1,0 +1,203 @@
+
+# Java
+https://www.codejava.net/
+https://www.javatpoint.com/java-tutorial
+https://javadesdecero.es/
+https://programacion.net/articulo/introduccion_a_los_servicios_web_en_java_190
+https://www.oscarblancarteblog.com/2016/12/19/web-services-con-java-jax-ws/
+https://www.arquitecturajava.com/usando-java-session-en-aplicaciones-web/
+
+Convertir String a Hex
+https://www.programmersought.com/article/93666988406/
+
+Consumir webservice SOAP:
+https://www.youtube.com/watch?v=2ToEge_xybI
+
+Proyectos web en Eclipse - Tomcat:
+https://www.youtube.com/watch?v=p-j-Sjr0Tkg
+
+Regular Expression:
+https://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html#sum
+
+Maven Repository: 
+https://mvnrepository.com
+
+Lombok:
+https://projectlombok.org/download
+
+java Optional: 
+https://www.youtube.com/watch?v=ZqvbRCdZx8M
+
+Patrones de diseño: 
+https://refactoring.guru/es/design-patterns/java
+https://java-design-patterns.com/
+
+Collections: 
+https://app.pluralsight.com/library/courses/java-8-lambda-expressions-collections-streams
+
+Agregar imagenes a Excel: 
+https://www.baeldung.com/java-add-image-excel  
+
+PDF:
+https://www.baeldung.com/java-pdf-creation
+https://github.com/LibrePDF/OpenPDF
+
+Como crear CRUD java con JPA e Hibernate:
+https://www.youtube.com/watch?v=mF8Lb65B1WU
+
+Como crear App Spring Boot con Java/JPA/Maven/MySQL
+https://www.youtube.com/watch?v=jqozqN0D0ng
+https://www.youtube.com/watch?v=sitzf7rGius
+
+Como crear Java/Maven con VSC:
+https://www.youtube.com/watch?v=BSLCmMDxWzg
+
+JDBC Prepared Statement:
+https://www.arquitecturajava.com/jdbc-prepared-statement-y-su-manejo/
+
+Paradigma funcional:
+https://www.youtube.com/watch?v=4WEOzOndA68&list=PLvimn1Ins-419yVe5iPfiXrg4mZJl5kLS
+
+# HTML
+http://qhmit.com/html/
+
+# Git
+https://git-scm.com/
+
+# Hibernate
+https://hibernate.org/
+
+# Apache
+https://www.apache.org/
+https://cxf.apache.org/
+http://tomcat.apache.org/
+
+Desplegar aplicacion web:
+https://javiergarciaescobedo.es/despliegue-de-aplicaciones-web/86-servidores-de-aplicaciones
+312-despligue-de-aplicaciones-web-en-tomcat
+
+# Baeldung
+https://www.baeldung.com/
+
+# Diferencias entre print, println y printf
+https://programmerclick.com/article/9781408172/ 
+
+# SoapUI
+http://www.soapui.org / http://www.smartbear.com
+https://www.youtube.com/watch?v=rfIi9hdT-vk
+https://www.youtube.com/watch?v=zfNrakTZ0j8
+
+# Proyecto nodejs, express, mysql, angular
+https://www.youtube.com/watch?v=m0qeCEo2Id8
+
+# Proyectos spring boot, mysql, angular
+https://www.youtube.com/watch?v=sitzf7rGius
+https://www.youtube.com/watch?v=_PAKhKSunek
+
+# Spring 
+https://spring.io/
+https://www.youtube.com/watch?v=rryn1Hs6qHI
+https://docs.spring.io/spring-framework/docs/3.0.x/reference/expressions.html
+https://www.thymeleaf.org/
+
+Spring Boot - API Rest seguridad:
+https://www.youtube.com/watch?v=zKOBeeqTKFo
+
+Paso de Parametros:
+https://www.ti-enxame.com/pt/java/passar-varios-parametros-para-descansar-api-spring/825824755/
+
+Excel:
+https://www.codejava.net/frameworks/spring-boot/export-data-to-excel-example
+
+# Angular
+https://angular.io/
+https://material.angular.io/
+
+# Javascript
+https://ejs.co/
+https://d3js.org/
+
+# Node.js
+https://nodejs.org/es/
+
+# NPM
+https://www.npmjs.com/
+
+# Express
+https://expressjs.com/
+
+# CSS
+https://animate.style/
+
+# Bootstrap
+https://getbootstrap.com/
+https://codingpotions.com/desarrollo-web-boostrap
+
+# Font Awesome
+https://fontawesome.com/
+
+# FindIcons
+https://findicons.com/
+
+# Palettes Copy & Paste
+https://flatuicolors.com/
+
+# Color Hex
+https://www.color-hex.com/
+
+# RPG
+https://www.rpgpgm.com/
+Free Form:
+https://developer.ibm.com/articles/i-ibmi-rpg-support/#
+
+# AS400
+https://www.go4as400.com/
+https://developer.ibm.com/articles/i-send-receive-user-defined-soap-rest-messages-trs/
+
+# Linux
+Como instalar Arch Linux:
+https://www.youtube.com/watch?v=JO_rZ0RIjNY
+
+# Tutoriales - Educativos
+https://www.w3schools.com/
+https://www.tutorialsteacher.com/
+https://uniwebsidad.com/
+https://desarrolloweb.com/
+https://aprenderaprogramar.com/
+https://leetcode.com/
+https://www.typescriptlang.org/
+https://programmerclick.com/
+
+BDs:
+https://videlcloud.wordpress.com/2017/03/05/buenas-practicas-para-el-diseno-de-base-de-datos/
+
+# Notepad++
+https://testeandosoftware.com/notepad-trucos-esenciales/
+
+# UiPath
+https://www.uipath.com/
+
+# Selenium
+https://www.selenium.dev/
+
+# Medir velocidad comunicacion
+https://www.speakeasy.net/speedtest/
+
+# Flutter
+https://flutter.dev/
+
+# Ingles
+https://www.viajarsiningles.com/aprender-ingles-para-viajar/pronunciacion-en-ingles-alfabeto-fonetico/
+http://www.teachingenglish.org.uk/article/phonemic-chart
+
+Mejor forma de aprender ingles para chicos:
+https://www.youtube.com/watch?v=te4kC-AxW00
+
+# Origen apllidos
+https://es.geneanet.org/apellidos/
+
+# Windows
+Eliminar particiones de disco
+https://www.youtube.com/watch?v=qK81yjlCkb4
+https://www.youtube.com/watch?v=dTHtD0G_Hkc
+https://www.youtube.com/watch?v=SoerzIGZYag 

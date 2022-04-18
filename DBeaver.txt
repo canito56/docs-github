@@ -1,0 +1,35 @@
+
+--- Nueva Database {
+Database -> New Database Connection -> SQL -> PostgreSQL ó SQL Server por ej -> next 
+}
+
+--- SQL Server {
+password: admreservas
+username: reservas
+url: jdbc:sqlserver://10.29.65.170:1433;databaseName=Translago
+
+El script para translago me lo genera en:
+C:\Users\jorge.bardaro\AppData\Roaming\DBeaverData\workspace6\General\Scripts
+}
+
+--- Salog {
+    Prod {
+        Host: usngkpg14lex.us.int.kn
+        Port: 5432
+        Database: salex
+
+        Autentication: Database Native
+        User: sa
+        Password: sadev
+    }
+
+    Test {
+        Host: usngkpg12lex.us.int.kn
+        Port: 5432
+        Database: salex 
+
+        Autentication: Database Native
+        User: sa
+        Password: sadev
+    }
+}

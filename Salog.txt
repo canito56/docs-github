@@ -1,0 +1,157 @@
+
+--- Salog {
+  SALOG es el nombre genérico para SeaLog y AirLog 
+}
+
+
+--- Cajitas {
+    Prod {
+        cajitas: http://scalex-salog.int.kn:8080/salog-ar-lex-app/wfe/process-view?key=
+        contexto: http://scalex-salog.int.kn:8080/salog-ar-lex-app/wfe/process-view?pipeline=
+    }
+
+    Test {
+        cajitas: http://scalex-salog-test.int.kn:8080/salog-ar-lex-app/wfe/process-view?key=
+        contexto: http://scalex-salog-test.int.kn:8080/salog-ar-lex-app/wfe/process-view?pipeline=
+    }
+}
+
+
+--- Moba {
+    Username: jorge.bardaro
+    Password: Milanga1
+
+    Crear sesiones para:
+        Test: usngksl953lex.us.int.kn
+        Prod: usngksl954lex.us.int.kn
+
+    Comandos más usados:
+    sudo su - tomcat    										- y le pongo mi pwd, esto es para pasar a ser usuario tomcat
+    cd apache-tomcat-9.0.22/									- me meto en el dir de tomcat
+    cd logs														- entro en carpeta de logs
+    cat server-br.log |grep "7a9f23b89e2f4c0c864f0f3df1e647ef" 	- para buscar un key en el log
+
+    Cada pais tiene un server-xx.log donde xx es el pais.
+    Salir siempre con exit de las sesiones porque si no quedan vivas eternamente.
+}
+
+
+--- RHEL7 (para pedir pwd de Moba/Linux) {
+https://things.int.kn/login     (entro con credenciales de Windows)
+}
+
+
+# Wiki {
+https://wiki.int.kn/display/regionsa/LEX+Team%3A+technical+maintenance+processes
+}
+
+
+--- Eclipse {
+http://repository.int.kn/service/rest/repository/browse/salog-lex-kndesktop/com/kn/lex-distribution/4.11.5/
+http://repository.int.kn/repository/salog-lex-kndesktop/com/kn/lex-distribution/4.11.5/lex-distribution-4.11.5-zip.001
+c:\salex
+https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=hotspot
+}
+
+
+--- Argentina {
+    COMFIAR {
+        
+    }
+    AFIP {
+
+    }
+	VIGA {
+		usuario: jorge.bardaro@kuehne-nagel.com
+		pwd: Milanga06---
+	{
+}
+
+
+--- Brasil {
+    Synchro {
+
+    }
+
+}
+
+
+--- Colombia {
+    Carvajal {
+
+    }
+    DIAN {
+
+    }
+    
+    Para ver si Colombia esta levantado en Test:
+    https://wscenflab.cen.biz/isows/InvoiceService?wsdl
+
+}
+
+
+--- Chile {
+    DBNeT {
+
+    }
+    SRI {
+
+    }
+}
+
+
+--- Costa Rica {
+    goSocket {
+
+    }
+    Tienen una cola de mensajes, KN consume esta cola y se descarga las novedades ciel y salog. Esto tiene un quilombo:
+    la tabla se llama cr_gosocket_message
+    goSocket respuestas:
+        select * from cr_gosocket_message cgm where document_number like '%2010000019371%' 
+        order by message_timestamp
+
+}
+
+
+--- Ecuador {
+    COMFIAR {
+
+    }
+}
+
+
+--- Peru {
+    COMFIAR {
+
+    }
+    SUNAT {
+
+    }
+}
+
+
+--- Tips varios {
+    Cuando la cajita 'check response' queda en rojo se le da retry.
+    
+    La cajita 'register data' es la que envia al proveedor.
+    
+    Para retroceder una cajita, a la q quiero retroceder le pongo NotExecuted, y a la anterior q esta en Success, le pongo ReadyForExecution (esto se ve con el qry de wf_task_instance). También hay q cambiar el status en la cabecera (qry wf_process_instance) y ponerle Running.
+
+    Para adelantar una cajita, a la q hay q adelantar le pongo Success, y a la que quiero ir le pongo ReadyForExecution y le pongo el contexto y la fecha de la cajita que dejé en Success. También hay q cambiar el status en la cabecera (qry wf_process_instance) y ponerle Running.
+
+    Para despertar jobs se usa una url por pais, por ej: scalex-salog.int.kn:8080/salog-cl-lex-app/lex-quartz-jobs
+
+    Si queda en error la cajita 'Upload PDF' se le da Retry, si ya estuviera lo pisa y lista.
+
+    Cuando las cajitas terminan de procesar un doc, ponen status 'Success' tanto en la tabla wf_process_instance como en la 
+        wf_task_instance, y ponen 'theEnd' en el campo end_event_id de la tabla wf_process_instance. Si llegara a pasar que 
+        queda status en 'Running' y estuvieran todas las cajitas en verde, hay q poner 'Success' en status.   
+
+    xx_invoice_history extraStuff tiene datos para otros procesos.
+
+    Si marco el header de una cajita como Success, ya no la trata más.
+
+    Para enviar rechazo a Salog, pongo la cajita con el task_id que sea en Error en status, en la cajita con task_id responseSalogFalse pongo ReadyForExecution y le pongo el contexto (copiado de la cajita a la que le puse error), en la tabla task_instance, y en la process_instance en status pongo Running.
+
+    En todos los paises hay jobs por criterio de numerador. En Brasil no, es a medida q van entrando.
+}

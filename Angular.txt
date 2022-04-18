@@ -1,0 +1,59 @@
+
+--- Para desinstalar CLI {
+npm uninstall -g angular-cli
+npm uninstall -g @angular/cli 
+}
+
+
+--- Borrar chache para q no queden paquetes angiguos
+npm cache clean --force
+
+
+--- Instalar última versión de angular cli
+npm install -g @angular/cli@latest
+
+
+--- Instalar versión específica
+npm install -g @angular/cli@11.2.0	(esta es global para la PC)
+
+npm install -D @angular/cli@11.2.0 	(esta es local para el proyecto, no es global)
+}
+
+--- Generar nuevo proyecto {
+Primero me ubico en la carpeta que quiero
+ng new nombre-proyecto
+	would you like to add angular rouing? (y/N) N
+	CSS
+	Cuando termina crea la carpeta nombre-proyecto
+}
+	
+
+--- Para comprobar que funciona {
+Me meto dentro de la carpeta del proyeco y hago:
+ng serve -o 
+	y lanza la pantalla de angular en el navegador. Si no la lanza automaticamente, abro el navegador y le doy http://localhost:4200
+}
+	
+
+--- Crear componente (siempre dentro de la carpeta del proyeco)
+ng g component folder/nombre-componente 
+
+
+--- Luego de descargar o clonar proyecto
+npm install
+
+
+--- Desinstalar dependencias {
+npm rm --save xlsx
+npm rm --save-dev xlsx 		(si se desea eliminar del desarrollo)	
+}
+
+
+--- Links {
+https://www.youtube.com/watch?v=tP42hCXf-Ro
+https://www.youtube.com/watch?v=i-oYrcNtc2s (dura 4:37hs con carrito de productos incluido)
+https://www.youtube.com/watch?v=c4xzegZrwMo (Angular Material Data Table - Exportar a Excel)
+}
+
+
+

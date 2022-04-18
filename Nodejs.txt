@@ -1,0 +1,12 @@
+
+--- Ver version 
+node -v
+
+--- Actualizar nodejs
+npm install -g npm@latest
+
+--- Limpiar cache para que no tome lo que quedó ahi
+npm cache clean --force
+
+--- Desactivar auditorias de npm para evitar fallos en instalaciones (de angular por ej)
+npm set audit false

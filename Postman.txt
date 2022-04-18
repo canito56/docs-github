@@ -1,0 +1,15 @@
+
+--- Credentials {
+eMail: 	jorge.bardaro@gmail.com
+
+User:	jabpostman
+pwd:	JBPostman20110101
+}
+
+
+--- {
+Definir una Collection y adentro todas las acciones (GET, POST, etc)
+En la Collection, en Auth, poner el token. 
+Luego, en cada acción, en Type, poner "inherit auth from parent", con esto la acción hereda el token que puse en la collection.
+
+}
